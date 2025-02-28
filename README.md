@@ -25,6 +25,24 @@
 
 # pixi: Package Management Made Easy
 
+## Pixi Conda
+
+Build using:
+```
+cargo r -r -p pixi_conda_bin
+cp target/release/pixi-conda ~/bin/
+```
+Then put this into your `~/.shellrc`:
+```
+alias conda="pixi-conda"
+```
+The following commands work:
+```
+conda create -n gfortran gfortran
+conda create -f environment.yml
+conda activate myenv
+```
+
 ## Overview
 
 `pixi` is a cross-platform, multi-language package manager and workflow tool built on the foundation of the conda ecosystem. It provides developers with an exceptional experience similar to popular package managers like `cargo` or `yarn`, but for any language.
